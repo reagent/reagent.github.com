@@ -1,0 +1,4 @@
+name: Patrick Reagan's Intern Vigeblog
+markdown: redcarpet
+pygments: true
+paginate: true
