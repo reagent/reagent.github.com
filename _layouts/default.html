@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} | Patrick Reagan</title>
+    <style>
+      *  { font-family: Courier }
+      dd { padding-bottom: 20px; margin-left: 25px; }
+      dt { padding-bottom: 5px; margin-left: 5px; }
+
+      /* Layout */
+      table     { margin: auto; border-collapse: collapse; }
+      td        { padding: 0 3px 3px 3px; }
+      tr.header { border-bottom: 1px solid #000; }
+      td.body   { padding-top: 20px; padding-left: 10px; }
+
+      /* Code */
+      code {
+        background-color: #CCC;
+        border-radius: 5px;
+        padding: 0 3px 0 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table width="800">
+      <tr class="header">
+        <td style="text-align: left;">
+          <a href="/">/</a>
+        </td>
+        <td style="text-align: right;">
+          <a href="/essays">essays</a>
+          <a href="/software">software</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="body">
+          <h2>{{ page.title }}</h2>
+
+          {{ content }}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

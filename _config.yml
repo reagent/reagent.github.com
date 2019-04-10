@@ -1,0 +1,12 @@
+permalink: /essays/:title
+
+defaults:
+  - scope:
+      type: "pages"
+    values:
+      layout: "default"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
