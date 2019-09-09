@@ -211,7 +211,9 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    pdfkit (0.8.4.1)
     public_suffix (3.0.3)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -237,12 +239,18 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.5.0)
+    wkhtmltopdf-binary (0.12.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  commonmarker
   github-pages
+  nokogiri
+  pdfkit
+  rake
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.17.2

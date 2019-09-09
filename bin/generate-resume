@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+
+require "nokogiri"
+require "commonmarker"
+require "pathname"
+require "pdfkit"
+
+root_path         = Pathname.new(__FILE__).join("..", "..").expand_path
+source_path       = root_path.join("_drafts", "resume")
+stylesheet_file   = source_path.join("pdf.css")
+destination_file  = root_path.join("_pages", "resume.md")
+downloadable_file = root_path.join("files", "resume.pdf")
+
+web_components = %w[meta.md body.md footer.md]
+pdf_components = %w[header.md body.md]
+
+# Need to create Markdown file for site
+destination_file.open("w") do |out|
+  web_components.each do |filename|
+    out << source_path.join(filename).read
+  end
+end
+
+# Create the HTML and subsequent PDF version
+source_markdown = String.new.tap do |data|
+  pdf_components.each do |filename|
+    data << source_path.join(filename).read
+  end
+end
+
+document = Nokogiri::HTML(CommonMarker.render_html(source_markdown))
+
+html_node = document.at_css("html")
+
+# Adding stylesheet
+html_node.first_element_child.before(<<-HTML
+  <head>
+    <style>
+      #{stylesheet_file.read}
+    </style>
+  </head>
+HTML
+)
+
+# Adding IDs to sections
+(document / "h1,h2,h3,h4,h5,h6").each do |node|
+  node["id"] = node.text.downcase.gsub(/\W+/, "-").squeeze("-")
+end
+
+kit = PDFKit.new(document.to_s, {
+  page_size:     "Letter",
+  margin_left:   "0.5in",
+  margin_right:  "0.5in",
+  margin_top:    "0.25in",
+  margin_bottom: "0.25in"
+})
+
+kit.to_file(downloadable_file)

@@ -13,6 +13,30 @@
       tr.header { border-bottom: 1px solid #000; }
       td.body   { padding-top: 20px; padding-left: 10px; }
 
+      li {
+        padding-bottom: 5px;
+      }
+
+      #resume #education ~ p {
+        margin: 0;
+      }
+
+      #resume #publications ~ ul,
+      #resume #presentations ~ ul {
+        padding-left: 15px;
+        list-style-type: none;
+      }
+
+      #resume h3 {
+        margin-bottom: 0;
+      }
+
+      #resume h4 {
+        margin-top: 0;
+        font-style: italic;
+        margin-left: 5px;
+      }
+
       /* Code */
       code {
         background-color: #CCC;
@@ -22,20 +46,24 @@
     </style>
   </head>
 
-  <body>
+  <body id="{{ page.id | slugify }}">
     <table width="800">
       <tr class="header">
         <td style="text-align: left;">
-          <a href="/">/</a>
+          <a href="/">/patrick-reagan</a>
         </td>
         <td style="text-align: right;">
-          <a href="/essays">essays</a>
+          <!-- <a href="/essays">essays</a> -->
+          <a href="/articles">articles</a>
           <a href="/software">software</a>
+          <a href="/resume">résumé</a>
         </td>
       </tr>
       <tr>
         <td colspan="2" class="body">
-          <h2>{{ page.title }}</h2>
+          {% if page.header %}
+            <h2>{{ page.header }}</h2>
+          {% endif %}
 
           {{ content }}
         </td>

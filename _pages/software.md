@@ -1,9 +1,11 @@
 ---
 title: Software
+header: Software
 ---
 
 A collection of selected software projects that I've created that I think are
-worth highlighting.
+worth highlighting.  Additional projects can be found on my
+[Github profile](https://github.com/reagent).
 
 [**Fleakr**](https://github.com/reagent/fleakr) (Ruby)
 : My first serious effort at creating a reusable software library which
