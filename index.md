@@ -9,6 +9,4 @@ than two decades of hands-on experience helping organizations bring their
 products to market while improving their development and delivery processes.
 
 To better understand my work and approach, please check out my
-[projects](/software), view my [résumé](/resume)([pdf](/files/resume.pdf)), or
-send me an
-[email](mailto:patrick@the-reagans.com?subject=I'm%20your%20biggest%20fan).
+[projects](/software), view my [résumé](/resume)([pdf](/files/resume-patrick-reagan.pdf)), or send me an [email](mailto:patrick@the-reagans.com?subject=I'm%20your%20biggest%20fan).

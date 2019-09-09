@@ -75,6 +75,6 @@ B.S. Computer Science
 1999
 
 ---
-A downloadable version is available [here](files/resume.pdf)
+A downloadable version is available [here](files/resume-patrick-reagan.pdf)
 
 ---

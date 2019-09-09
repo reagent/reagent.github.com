@@ -11,7 +11,7 @@ root_path         = Pathname.new(__FILE__).join("..", "..").expand_path
 source_path       = root_path.join("_drafts", "resume")
 stylesheet_file   = source_path.join("pdf.css")
 destination_file  = root_path.join("_pages", "resume.md")
-downloadable_file = root_path.join("files", "resume.pdf")
+downloadable_file = root_path.join("files", "resume-patrick-reagan.pdf")
 
 web_components = %w[meta.md body.md footer.md]
 pdf_components = %w[header.md body.md]
