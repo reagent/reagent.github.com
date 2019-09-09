@@ -8,7 +8,7 @@ development:
 
 * [Two Ways to Share Git Hooks with Your Team](https://www.viget.com/articles/two-ways-to-share-git-hooks-with-your-team/)
 * [OTP: The Fun and Frustration of C](https://www.viget.com/articles/otp-the-fun-and-frustration-of-c/)
-* [ollaborate with Google Slides, Deliver with Keynote](https://www.viget.com/articles/collaborate-with-google-slides-deliver-with-keynote/)
+* [Collaborate with Google Slides, Deliver with Keynote](https://www.viget.com/articles/collaborate-with-google-slides-deliver-with-keynote/)
 * [Fun with Cellular Automata](https://www.viget.com/articles/fun-with-cellular-automata/)
 * [Teaching Kids Programming with Khan Academy](https://www.viget.com/articles/teaching-kids-programming-with-khan-academy/)
 * [Game Programming in C with the Ncurses Library](https://www.viget.com/articles/game-programming-in-c-with-the-ncurses-library/)
