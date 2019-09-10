@@ -13,8 +13,8 @@ To better understand my work and approach, please check out my
 
 ## Recent Articles
 
-{% assign articles = site.articles | sort:'date' | reverse | limit:10 %}
-{%- for article in articles -%}
+{% assign articles = site.articles | sort:'date' | reverse %}
+{%- for article in articles | limit:10 -%}
 * [{{ article.title }}]({{ article.source_url }}) ({{ article.date | date:'%B %Y'}})
 {% endfor %}
 
