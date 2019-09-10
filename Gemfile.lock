@@ -245,9 +245,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  commonmarker
   github-pages
-  nokogiri
   pdfkit
   rake
   wkhtmltopdf-binary
