@@ -10,3 +10,6 @@ collections:
   pages:
     output: true
     permalink: /:name
+  articles:
+    output: false
+    sort_by: date
