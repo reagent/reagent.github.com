@@ -10,3 +10,13 @@ products to market while improving their development and delivery processes.
 
 To better understand my work and approach, please check out my
 [projects](/software), view my [résumé](/resume)([pdf](/files/resume-patrick-reagan.pdf)), or send me an [email](mailto:patrick@the-reagans.com?subject=I'm%20your%20biggest%20fan).
+
+## Recent Articles
+
+{% assign articles = site.articles | sort:'date' | reverse | limit:10 %}
+{%- for article in articles -%}
+* [{{ article.title }}]({{ article.source_url }}) ({{ article.date | date:'%B %Y'}})
+{% endfor %}
+
+
+[more articles](/articles)
