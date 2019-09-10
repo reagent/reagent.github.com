@@ -8,7 +8,7 @@ require "pathname"
 require "pdfkit"
 
 root_path         = Pathname.new(__FILE__).join("..", "..").expand_path
-source_path       = root_path.join("_drafts", "resume")
+source_path       = root_path.join("_resume")
 stylesheet_file   = source_path.join("pdf.css")
 destination_file  = root_path.join("_pages", "resume.md")
 downloadable_file = root_path.join("files", "resume-patrick-reagan.pdf")

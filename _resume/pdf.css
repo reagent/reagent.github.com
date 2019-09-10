@@ -1,0 +1,53 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 2.4em;
+}
+
+ul {
+  margin-left: 1em;
+}
+
+li {
+  padding-bottom: 0.3em;
+}
+
+h1 {
+  font-size: 3.2em;
+  margin-bottom: 0.1em;
+}
+
+h3 {
+  margin-bottom: 0.1em;
+  margin-left: 0.5em;
+}
+
+h4 {
+  margin-top: 0;
+  margin-left: 1em;
+  font-style: italic;
+}
+
+h4 ~ ul {
+  margin-left: 1.5em;
+}
+
+p {
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+}
+
+#publications ~ ul,
+#presentations ~ ul {
+  padding-left: 0.5em;
+  list-style-type: none;
+}
