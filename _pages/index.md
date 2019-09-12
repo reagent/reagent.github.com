@@ -9,14 +9,20 @@ than two decades of hands-on experience helping organizations bring their
 products to market while improving their development and delivery processes.
 
 To better understand my work and approach, please check out my
-[projects](/software), view my [résumé](/resume)([pdf](/files/resume-patrick-reagan.pdf)), or send me an [email](mailto:patrick@the-reagans.com?subject=I'm%20your%20biggest%20fan).
+[projects](/software), view my
+[résumé](/resume)([pdf](/files/resume-patrick-reagan.pdf)), or send me an
+[email](mailto:patrick@the-reagans.com?subject=I'm%20your%20biggest%20fan).
+
+## Featured Software Projects
+
+{% assign projects = site.projects | where:'featured',true | sort:'priority' %}
+{% include projects.md projects=projects %}
+
+[more projects](/projects)
 
 ## Recent Articles
 
 {% assign articles = site.articles | sort:'date' | reverse %}
-{%- for article in articles | limit:10 -%}
-* [{{ article.title }}]({{ article.source_url }}) ({{ article.date | date:'%B %Y'}})
-{% endfor %}
-
+{% include articles.md articles=articles limit=10 %}
 
 [more articles](/articles)

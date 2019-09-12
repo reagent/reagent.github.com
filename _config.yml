@@ -13,3 +13,6 @@ collections:
   articles:
     output: false
     sort_by: date
+  projects:
+    output: false
+    sort_by: priority

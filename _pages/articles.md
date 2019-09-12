@@ -7,7 +7,4 @@ Articles I've written on various technical topics, mostly related to software
 development:
 
 {% assign articles = site.articles | sort: 'date' | reverse %}
-
-{% for article in articles %}
-* [{{ article.title }}]({{ article.source_url }}) ({{ article.date | date: '%B %Y' }})
-{%- endfor -%}
+{% include articles.md articles=articles %}
