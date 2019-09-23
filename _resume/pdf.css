@@ -16,14 +16,26 @@ h1 {
   margin-bottom: 0.1em;
 }
 
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+  margin-top: 0.5em;
+}
+
+h2 ~ p {
+  margin-left: 1.0em;
+}
+
 h3 {
   margin-bottom: 0.1em;
   margin-left: 0.5em;
+  margin-top: 0.5em;
 }
 
 h4 {
   margin-top: 0;
   margin-left: 1em;
+  margin-bottom: 0.5em;
   font-style: italic;
 }
 
@@ -31,6 +43,11 @@ h4 ~ ul {
   margin-left: 1.5em;
 }
 
+h2#summary ~ p {
+  margin-bottom: 16px;
+}
+
+h2#education ~ p,
 p {
   margin: 0;
   margin-left: 0.5em;
