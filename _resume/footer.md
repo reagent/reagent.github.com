@@ -1,5 +1,5 @@
 
 ---
-A downloadable version is available [here](files/resume-patrick-reagan.pdf)
+PDF versions: [1-page](files/resume-patrick-reagan.pdf) / [2-page](files/resume-patrick-reagan-2up.pdf)
 
 ---

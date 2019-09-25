@@ -13,6 +13,12 @@
       tr.header { border-bottom: 1px solid #000; }
       td.body   { padding-top: 20px; padding-left: 10px; }
 
+      hr {
+        border: none;
+        height: 1px;
+        background-color: black;
+      }
+
       li {
         padding-bottom: 5px;
       }
@@ -41,6 +47,16 @@
 
       #resume h2#experience ~ ul li {
         padding-bottom: 5px;
+      }
+
+      #resume h2#education ~ hr {
+        margin-top: 25px;
+      }
+
+      #resume hr ~ hr {
+        padding: 0;
+        margin-top: 8px !important;
+        margin-bottom: 25px;
       }
 
       #resume h3 {

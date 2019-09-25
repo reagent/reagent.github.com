@@ -7,54 +7,84 @@ require "commonmarker"
 require "pathname"
 require "pdfkit"
 
-root_path         = Pathname.new(__FILE__).join("..", "..").expand_path
-source_path       = root_path.join("_resume")
-stylesheet_file   = source_path.join("pdf.css")
-destination_file  = root_path.join("_pages", "resume.md")
-downloadable_file = root_path.join("files", "resume-patrick-reagan.pdf")
+root_path   = Pathname.new(__FILE__).join("..", "..").expand_path
+source_path = root_path.join("_resume")
 
-web_components = %w[meta.md body.md footer.md]
-pdf_components = %w[header.md body.md]
+files = {
+  "_pages/resume.md" => {
+    components: %w[meta.md body.md footer.md],
+    format:     "markdown"
+  },
+  "files/resume-patrick-reagan.pdf" => {
+    components:  %w[header.md body.md],
+    stylesheets: %w[1up.css pdf.css],
+    format:      "pdf",
+    options:     {
+      page_size:     "Letter",
+      margin_left:   "0.5in",
+      margin_right:  "0.5in",
+      margin_top:    "0.25in",
+      margin_bottom: "0.25in"
+    }
+  },
+  "files/resume-patrick-reagan-2up.pdf" => {
+    components:  %w[header.md body.md],
+    stylesheets: %w[2up.css pdf.css],
+    format:      "pdf",
+    options:     {
+      page_size:     "Letter",
+      margin_left:   "1.0in",
+      margin_right:  "1.0in",
+      margin_top:    "0.75in",
+      margin_bottom: "0.75in"
+    }
+  }
+}
 
-# Need to create Markdown file for site
-destination_file.open("w") do |out|
-  web_components.each do |filename|
-    out << source_path.join(filename).read
+files.each do |output_filename, config|
+  output_file = root_path.join(output_filename)
+
+  case config[:format]
+  when "markdown"
+    output_file.open("w") do |out|
+      config[:components].each do |filename|
+        out << source_path.join(filename).read
+      end
+    end
+  when "pdf"
+    source_markdown = String.new.tap do |data|
+      config[:components].each do |filename|
+        data << source_path.join(filename).read
+      end
+    end
+
+    document = Nokogiri::HTML(CommonMarker.render_html(source_markdown))
+
+    html_node = document.at_css("html")
+
+    style_content = String.new.tap do |content|
+      config[:stylesheets].each do |filename|
+        content << source_path.join(filename).read
+      end
+    end
+
+    # Adding stylesheet
+    html_node.first_element_child.before(<<-HTML
+      <head>
+        <style>
+          #{style_content}
+        </style>
+      </head>
+    HTML
+    )
+
+    # Adding IDs to sections
+    (document / "h1,h2,h3,h4,h5,h6").each do |node|
+      node["id"] = node.text.downcase.gsub(/\W+/, "-").squeeze("-")
+    end
+
+    PDFKit.new(document.to_s, config[:options]).to_file(output_file)
+  else
+    raise "Invalid format: '#{config[:format]}''"
   end
 end
-
-# Create the HTML and subsequent PDF version
-source_markdown = String.new.tap do |data|
-  pdf_components.each do |filename|
-    data << source_path.join(filename).read
-  end
-end
-
-document = Nokogiri::HTML(CommonMarker.render_html(source_markdown))
-
-html_node = document.at_css("html")
-
-# Adding stylesheet
-html_node.first_element_child.before(<<-HTML
-  <head>
-    <style>
-      #{stylesheet_file.read}
-    </style>
-  </head>
-HTML
-)
-
-# Adding IDs to sections
-(document / "h1,h2,h3,h4,h5,h6").each do |node|
-  node["id"] = node.text.downcase.gsub(/\W+/, "-").squeeze("-")
-end
-
-kit = PDFKit.new(document.to_s, {
-  page_size:     "Letter",
-  margin_left:   "0.5in",
-  margin_right:  "0.5in",
-  margin_top:    "0.25in",
-  margin_bottom: "0.25in"
-})
-
-kit.to_file(downloadable_file)
