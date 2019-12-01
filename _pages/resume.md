@@ -78,6 +78,6 @@ In addition to my work developing applications for a variety of clients, I also:
 B.S. Computer Science (1999)
 
 ---
-PDF versions: [1-page](files/resume-patrick-reagan.pdf) / [2-page](files/resume-patrick-reagan-2up.pdf)
+PDF versions: [1-page](/assets/files/resume-patrick-reagan.pdf) / [2-page](/assets/files/resume-patrick-reagan-2up.pdf)
 
 ---

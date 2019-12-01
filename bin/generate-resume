@@ -15,7 +15,7 @@ files = {
     components: %w[meta.md body.md footer.md],
     format:     "markdown"
   },
-  "files/resume-patrick-reagan.pdf" => {
+  "assets/files/resume-patrick-reagan.pdf" => {
     components:  %w[header.md body.md],
     stylesheets: %w[1up.css pdf.css],
     format:      "pdf",
@@ -27,7 +27,7 @@ files = {
       margin_bottom: "0.25in"
     }
   },
-  "files/resume-patrick-reagan-2up.pdf" => {
+  "assets/files/resume-patrick-reagan-2up.pdf" => {
     components:  %w[header.md body.md],
     stylesheets: %w[2up.css pdf.css],
     format:      "pdf",
