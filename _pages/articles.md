@@ -6,5 +6,10 @@ header: Articles
 Articles I've written on various technical topics, mostly related to software
 development:
 
-{% assign articles = site.articles | sort: 'date' | reverse %}
+{% assign posts = site.posts %}
+{% if site.show_drafts != true %}
+  {% assign posts = posts | where:'draft',false %}
+{% endif %}
+
+{% assign articles = site.articles | concat: posts | sort:'date' | reverse %}
 {% include articles.md articles=articles %}

@@ -22,7 +22,12 @@ To better understand my work and approach, please check out my
 
 ## Recent Articles
 
-{% assign articles = site.articles | sort:'date' | reverse %}
+{% assign posts = site.posts %}
+{% if site.show_drafts != true %}
+  {% assign posts = posts | where:'draft',false %}
+{% endif %}
+
+{% assign articles = site.articles | concat: posts | sort:'date' | reverse %}
 {% include articles.md articles=articles limit=10 %}
 
 [more articles](/articles)

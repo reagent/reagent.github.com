@@ -1,0 +1,90 @@
+@import "monokai.css" screen;
+
+*  { font-family: Courier }
+dd { padding-bottom: 20px; margin-left: 25px; }
+dt { padding-bottom: 5px; margin-left: 5px; }
+
+/* Layout */
+table     { width: 800px; margin: auto; border-collapse: collapse; }
+td        { padding: 0 3px 3px 3px; }
+tr.header { border-bottom: 1px solid #000; }
+td.body   { padding-top: 20px; padding-left: 10px; }
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+#post h1, #post h2 {
+  margin-bottom: 1px;
+}
+
+#post .article-date {
+  font-style: italic;
+  font-weight: unset;
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+#resume #education ~ p {
+  margin: 0;
+}
+
+#resume #publications ~ ul,
+#resume #presentations ~ ul {
+  padding-left: 15px;
+  list-style-type: none;
+}
+
+#resume h2#selected-client-work ~ ul {
+  padding-left: 20px;
+}
+
+#resume h2#selected-client-work ~ ul li {
+  padding-bottom: 10px;
+}
+
+#resume h2#experience ~ ul {
+  padding-left: 40px;
+}
+
+#resume h2#experience ~ ul li {
+  padding-bottom: 5px;
+}
+
+#resume h2#education ~ hr {
+  margin-top: 25px;
+}
+
+#resume hr ~ hr {
+  padding: 0;
+  margin-top: 8px !important;
+  margin-bottom: 25px;
+}
+
+#resume h3 {
+  margin-bottom: 0;
+}
+
+#resume h4 {
+  margin-top: 0;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+/* Code */
+.highlighter-rouge {
+  background-color: #272822;
+  border-radius: 3px;
+  width: 800px;
+  overflow-x: auto;
+}
+
+.highlighter-rouge pre {
+  margin: 5px;
+}

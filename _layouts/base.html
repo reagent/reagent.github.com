@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} | Patrick Reagan</title>
+    <link rel="stylesheet" href="/assets/css/screen.css" />
+  </head>
+
+  <body id="{{ layout.body_id | default: page.slug }}">
+    <table>
+      <tr class="header">
+        <td style="text-align: left;">
+          <a href="/">/patrick-reagan</a>
+        </td>
+        <td style="text-align: right;">
+          <a href="/articles">articles</a>
+          <a href="/projects">projects</a>
+          <a href="/resume">résumé</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="body">
+          {{ content }}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

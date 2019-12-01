@@ -1,10 +1,13 @@
-permalink: /essays/:title
-
 defaults:
   - scope:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /articles/:title
 
 collections:
   pages:
@@ -16,3 +19,9 @@ collections:
   projects:
     output: false
     sort_by: priority
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
