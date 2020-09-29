@@ -85,6 +85,11 @@ li {
   overflow-x: auto;
 }
 
+code.highlighter-rouge {
+  background-color: #ddd;
+  padding: 1px 3px;
+}
+
 .highlighter-rouge pre {
   margin: 5px;
 }
