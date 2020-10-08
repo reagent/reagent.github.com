@@ -3,16 +3,10 @@ title: Résumé
 ---
 ## Summary
 
-I am an experienced, pragmatic software developer who has a love for code
+I am an experienced, pragmatic software developer with a love for code
 quality, collaboration, and continuous improvement. I excel at breaking down
 complex engineering problems and building applications that deliver value across
 a diverse set of business domains.
-
-For the past 18 years, I have been applying my skills as a consultant for a
-full-service web consulting practice. This experience has provided me with
-extensive breadth but selective depth &ndash; I'm interested in deepening my
-skills to solve business problems at scale while collaborating with a
-supportive, tight-knit team.
 
 ## Selected Client Work
 
@@ -24,8 +18,18 @@ supportive, tight-knit team.
 
 ## Experience
 
+### Gloo, LLC - Staff Engineer: Platform
+#### November 2019 - Present
+
+As Staff Engineer, I joined the company to help build out our HTTP-based microservices in support of various in-market applications.
+
+* Improved the quality and delivery of a variety of TypeScript microservices through better API design, thorough testing, and meaningful code reviews
+* Helped scale an existing Rails API by directing database reads to be performed against our read-only Aurora replica to handle unique traffic spikes
+* Led bi-weekly meetings that provided a venue for engineers to share best practices for application development, demonstrate platform observability features, and keep the team up-to-date on relevant technologies
+* Coordinated and directed contractor teams in assisting with feature planning and bug fixes for critical in-market products and supporting microservices
+
 ### Viget Labs, LLC - Development Director
-#### June 2005 - Present
+#### June 2005 - November 2019
 
 In addition to my work developing applications for a variety of clients, I also:
 
