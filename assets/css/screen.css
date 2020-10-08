@@ -1,6 +1,6 @@
 @import "monokai.css" screen;
 
-*  { font-family: Courier }
+*  { font-family: Courier, monospace; }
 dd { padding-bottom: 20px; margin-left: 25px; }
 dt { padding-bottom: 5px; margin-left: 5px; }
 
@@ -20,8 +20,16 @@ li {
   padding-bottom: 5px;
 }
 
-#post h1, #post h2 {
+#post h1 {
   margin-bottom: 1px;
+}
+
+#post h1 p { 
+  margin: 0;
+}
+
+#post h2 {
+  margin-bottom: 7px;
 }
 
 #post .article-date {
@@ -80,9 +88,10 @@ li {
 /* Code */
 .highlighter-rouge {
   background-color: #272822;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 800px;
   overflow-x: auto;
+  padding: 15px;
 }
 
 code.highlighter-rouge {
@@ -90,6 +99,14 @@ code.highlighter-rouge {
   padding: 1px 3px;
 }
 
+.highlighter-rouge code { 
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
 .highlighter-rouge pre {
   margin: 5px;
+}
+
+div.highlighter-rouge.language-plaintext {
+  color: #fff;
 }
