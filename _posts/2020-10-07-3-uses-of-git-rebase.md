@@ -12,7 +12,7 @@ There are 3 flavors that I find useful in my daily work:
 1. `git rebase --onto <new-base> <old-base>`
 
 
-## Using `git rebase <branch-name>`
+### Using `git rebase <branch-name>`
 
 I use this to get my local branch history up-to-date with the mainline 
 development branch. It allows for a linear history on my branch and optionally a
@@ -76,7 +76,7 @@ Now my history looks like this:
 a--b--c--d--e'--f'--g'  master
 ```
 
-## Using `git rebase -i <commit>`
+### Using `git rebase -i <commit>`
 
 Before rebasing `master`, I'll typically use the `--interactive` variant to 
 clean up my commit history by providing better comments and grouping related 
@@ -176,7 +176,7 @@ we'll be left with a history that might look like this:
 
 Now we're ready to rebase and merge into our `master` branch.
 
-## Using `git rebase --onto <new-base> <old-base>`
+### Using `git rebase --onto <new-base> <old-base>`
 
 At times, I may make a feature branch that, while I'm waiting to merge it, I 
 would like to start another feature that requires changes made on that feature 

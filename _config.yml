@@ -20,8 +20,4 @@ collections:
     output: false
     sort_by: priority
 
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+title: Patrick Reagan

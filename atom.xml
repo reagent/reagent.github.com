@@ -1,0 +1,40 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+{% assign posts = site.posts %}
+{% if site.show_drafts != true %}
+  {% assign posts = posts | where:'draft',false %}
+{% endif %}
+
+{% assign articles = site.articles | concat: posts | sort:'date' | reverse %}
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>{{ site.title }}</title>
+ <link href="{{ '/atom.xml' | relative_url }}" rel="self"/>
+ <link href="{{ site.url }}{{ site.baseurl }}/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.url }}</id>
+ <author>
+   <name>{{ site.author.name }}</name>
+   <email>{{ site.author.email }}</email>
+ </author>
+
+ {% for article in articles %}
+ <entry>
+  <title>{{ article.title | xml_escape }}</title>
+  <id>{{ site.url }}{{ article.id }}</id>
+  <updated>{{ article.date | date_to_xmlschema }}</updated>
+
+  {% if article.source_url %}
+    <link href="{{ article.source_url }}"/>
+  {% else %}
+    <link href="{{ site.url }}{{ site.baseurl }}{{ article.url }}"/>
+    <content type="html">{{ article.content | xml_escape }}</content>
+   {% endif %}
+ </entry>
+ {% endfor %}
+
+</feed>
