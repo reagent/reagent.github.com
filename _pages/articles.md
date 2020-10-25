@@ -12,4 +12,4 @@ development:
 {% endif %}
 
 {% assign articles = site.articles | concat: posts | sort:'date' | reverse %}
-{% include articles.md articles=articles %}
+{% include articles.html articles=articles %}

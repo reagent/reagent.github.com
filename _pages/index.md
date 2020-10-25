@@ -13,7 +13,7 @@ To better understand my work and approach, please check out my
 ## Featured Software Projects
 
 {% assign projects = site.projects | where:'featured',true | sort:'priority' %}
-{% include projects.md projects=projects %}
+{% include projects.html projects=projects %}
 
 [more projects](/projects)
 
@@ -25,7 +25,7 @@ To better understand my work and approach, please check out my
 {% endif %}
 
 {% assign articles = site.articles | concat: posts | sort:'date' | reverse %}
-{% include articles.md articles=articles limit=10 %}
+{% include articles.html articles=articles limit=10 %}
 
 [more articles](/articles)
 

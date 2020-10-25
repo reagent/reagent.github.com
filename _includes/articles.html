@@ -1,0 +1,11 @@
+<ul>
+  {%- for article in include.articles limit:include.limit -%}
+  {% if article.source_url %}
+  <li><a href="{{ article.source_url }}" class="external">{{ article.title }}</a>
+    <small>({{ article.date | date:'%B %Y'}})</small>
+  </li>
+  {% else %}
+  <li><a href="{{ article.url }}">{{ article.title }}</a> <small>({{ article.date | date:'%B %Y'}})</small></li>
+  {% endif %}
+  {% endfor %}
+</ul>

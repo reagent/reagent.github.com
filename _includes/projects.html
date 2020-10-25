@@ -1,0 +1,8 @@
+<dl>
+  {% for project in include.projects %}
+  <dt>
+    <a href="{{ project.repository_url }}">{{ project.name }}</a> ({{ project.language }})
+  </dt>
+  <dd>{{ project.content | markdownify }}</dd>
+  {%- endfor -%}
+</dl>
