@@ -2,7 +2,7 @@
 name: http
 language: C
 featured: false
-priority: 6
+priority: 60
 repository_url: https://github.com/reagent/http
 ---
 

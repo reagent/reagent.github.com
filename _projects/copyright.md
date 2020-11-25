@@ -2,7 +2,7 @@
 name: copyright
 language: Go
 featured: false
-priority: 7
+priority: 70
 repository_url: https://github.com/reagent/copyright
 ---
 

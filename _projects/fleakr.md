@@ -2,12 +2,12 @@
 name: Fleakr
 language: Ruby
 featured: true
-priority: 1
+priority: 10
 repository_url: https://github.com/reagent/fleakr
 ---
 
 A full-featured API client for Flickr photostreams that represents my first
-serious effort at creating a reusable software library.  This code demonstrates
+serious effort at creating a reusable software library. This code demonstrates
 a departure from the constraints of Rails to really dive deep into some core
 principles of object oriented design. There are some "clever" spots in the code
 that I don't think I would repeat if I were to approach this problem domain
