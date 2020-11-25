@@ -1,3 +1,10 @@
 #!/bin/bash
 
-bundle exec jekyll serve --drafts --strict_front_matter
+OPTS=
+
+if [ "$1" != "live" ]; then
+  OPTS="--drafts"
+fi
+
+
+bundle exec jekyll serve --strict_front_matter $OPTS
