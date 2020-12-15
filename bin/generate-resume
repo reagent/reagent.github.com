@@ -2,15 +2,12 @@
 
 require "bundler/setup"
 
-require "nokogiri"
-require "commonmarker"
-require "pathname"
-require "pdfkit"
+require_relative '../lib/resume_generator'
 
 root_path   = Pathname.new(__FILE__).join("..", "..").expand_path
 source_path = root_path.join("_resume")
 
-files = {
+config = {
   "_pages/resume.md" => {
     components: %w[meta.md body.md footer.md],
     format:     "markdown"
@@ -19,7 +16,7 @@ files = {
     components:  %w[header.md body.md],
     stylesheets: %w[1up.css pdf.css],
     format:      "pdf",
-    options:     {
+    pdf_options: {
       page_size:     "Letter",
       margin_left:   "0.5in",
       margin_right:  "0.5in",
@@ -31,7 +28,7 @@ files = {
     components:  %w[header.md body.md],
     stylesheets: %w[2up.css pdf.css],
     format:      "pdf",
-    options:     {
+    pdf_options: {
       page_size:     "Letter",
       margin_left:   "1.0in",
       margin_right:  "1.0in",
@@ -41,50 +38,10 @@ files = {
   }
 }
 
-files.each do |output_filename, config|
-  output_file = root_path.join(output_filename)
+generator = ResumeGenerator.new(
+  root_path: root_path, 
+  source_path: source_path, 
+  config: config
+)
 
-  case config[:format]
-  when "markdown"
-    output_file.open("w") do |out|
-      config[:components].each do |filename|
-        out << source_path.join(filename).read
-      end
-    end
-  when "pdf"
-    source_markdown = String.new.tap do |data|
-      config[:components].each do |filename|
-        data << source_path.join(filename).read
-      end
-    end
-
-    document = Nokogiri::HTML(CommonMarker.render_html(source_markdown))
-
-    html_node = document.at_css("html")
-
-    style_content = String.new.tap do |content|
-      config[:stylesheets].each do |filename|
-        content << source_path.join(filename).read
-      end
-    end
-
-    # Adding stylesheet
-    html_node.first_element_child.before(<<-HTML
-      <head>
-        <style>
-          #{style_content}
-        </style>
-      </head>
-    HTML
-    )
-
-    # Adding IDs to sections
-    (document / "h1,h2,h3,h4,h5,h6").each do |node|
-      node["id"] = node.text.downcase.gsub(/\W+/, "-").squeeze("-")
-    end
-
-    PDFKit.new(document.to_s, config[:options]).to_file(output_file)
-  else
-    raise "Invalid format: '#{config[:format]}''"
-  end
-end
+generator.save_to(root_path)
