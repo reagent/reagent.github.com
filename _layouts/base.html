@@ -1,39 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
 
-  <title>{{ page.title }} | {{ site.title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ 'assets/css/styles.css' | relative_url }}"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="{{ site.title }}"
+      href="{{ 'atom.xml' | relative_url }}"
+    />
+  </head>
 
-  <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
-</head>
+  <body>
+    <div class="container content">
+      <header
+        class="masthead"
+        width="100%"
+        style="margin-bottom: 0; padding-bottom: 0"
+      >
+        <table>
+          <tr>
+            <td style="padding-left: 0">
+              <h1 class="masthead-title">
+                <a href="{{ site.baseurl }}/" title="Home">Patrick Reagan</a>
+              </h1>
+            </td>
+            <td valign="bottom" style="text-align: right; padding-right: 0">
+              <a href="/articles">articles</a>
+              <a href="/projects">projects</a>
+              <a href="/resume">résumé</a>
+            </td>
+          </tr>
+        </table>
+      </header>
 
-<body>
-  <div class="container content">
-    <header class="masthead" width="100%" style="margin-bottom: 0; padding-bottom: 0;">
-      <table>
-        <tr>
-          <td style="padding-left: 0;">
-            <h1 class="masthead-title">
-              <a href="{{ site.baseurl }}/" title="Home">Patrick Reagan</a>
-            </h1>
-          </td>
-          <td valign="bottom" style="text-align: right; padding-right: 0;">
-            <a href="/articles">articles</a>
-            <a href="/projects">projects</a>
-            <a href="/resume">résumé</a>
-          </td>
-        </tr>
-      </table>
-    </header>
-
-    <main>
-      {{ content }}
-    </main>
-  </div>
-</body>
-
+      <main>{{ content }}</main>
+    </div>
+  </body>
 </html>
