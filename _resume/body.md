@@ -5,21 +5,25 @@ quality, collaboration, and continuous improvement. I excel at breaking down
 complex engineering problems and building applications that deliver value across
 a diverse set of business domains.
 
-## Selected Client Work
-
-- **2018 - 2019** &ndash; Modernized the ticket purchasing experience for visitors to the **Shedd Aquarium** website by providing a deep integration with their existing ticketing software _(Ruby, Rails, PostgreSQL, API Integration)_
-- **2017 - 2018** &ndash; Embedded with the **In-Q-Tel** engineering teams to enhance their investment deal tracking pipelines and improve their engineering practices _(Ruby, Rails, Go, SQLServer, Docker)_
-- **2017 - 2018** &ndash; Worked closely with the web team at **Bethesda Softworks** to re-platform microsites for their popular game titles (Fallout / Elder Scrolls / Quake) using a custom-built PHP library to fetch content from the Contentful API in time for a major E3 announcement _(PHP, Laravel, API Integration)_
-- **2016 - 2017** &ndash; Launched the new "Best States" microsite for **US News** which allowed users to perform multi-faceted rankings comparisons between US states with data delivered from a major publisher as flat files _(Python, Django, PostgreSQL, Custom API)_
-- **2012 - 2015** &ndash; Re-platformed the main **Shure** North America web presence which improved product promotion and provided better integration of custom tools _(Ruby, Rails, MySQL, Redis, API Integration)_
-
 ## Experience
+
+### KindHealth - Principal Engineer
+
+#### February 2021 - Present
+
+At KindHealth, I build technology solutions that help scale our growing brokerage business.
+
+- Reworked critical pieces of our PostgreSQL database schema which improved data integrity and allowed us to capture more commission revenue
+- Simplified operational complexity by migrating from a SQS / serverless setup to a proven Redis-backed queuing solution that provided better resilience at our smaller scale
+- Improved the stability of our core platform through the addition of an integration test layer which allowed the team to more quickly develop features and squash bugs
+- Built a shared data access library that provided a migration pathway away from an untested legacy Express / JavaScript backend towards a modern Nest.js / TypeScript backend
+- Fostered an engineering culture of constant improvement through thoughtful code reviews, tech-focused presentations, and one-on-one remote pairing sessions with other engineers
 
 ### Gloo, LLC - Staff Engineer: Platform
 
-#### November 2019 - Present
+#### November 2019 - January 2021
 
-As Staff Engineer, I joined the company to help build out our HTTP-based microservices in support of various in-market applications.
+As Staff Engineer, I architected and built several HTTP-based microservices in support of various in-market applications.
 
 - Improved the quality and delivery of a variety of TypeScript microservices through better API design, thorough testing, and meaningful code reviews
 - Helped scale an existing Rails API by directing database reads to be performed against our read-only Aurora replica to handle unique traffic spikes
@@ -32,7 +36,7 @@ As Staff Engineer, I joined the company to help build out our HTTP-based microse
 
 In addition to my work developing applications for a variety of clients, I also:
 
-- Helped grow the company's presence in Boulder from a one-man co-working outpost into a full-fledged office
+- Helped grow the company's presence in Boulder from a single person co-working outpost into a full-fledged office
 - Created and refined our engineering hiring process in order to provide consistency in evaluation and ensure that only the top candidates were considered for in-person evaluations
 - Established, planned, and led the engineering team's bi-annual offsite meetings as a means to connect personally and improve professionally
 - Improved software delivery by introducing agile methods that included iteration planning, acceptance test-driven development, and iteration retrospectives
@@ -42,19 +46,18 @@ In addition to my work developing applications for a variety of clients, I also:
 
 #### November 2000 - June 2005
 
-- Administered internal and client servers running a variety of operating systems (Linux / BSD / Windows), web servers (Apache / IIS), and databases (MySQL / PostgreSQL / SQL Server)
-- Planned and executed a migration to Subversion as the standard SCM tool and provided training to staff on its use
+- Administered internal and client servers running a variety of operating systems, web servers, and databases
 - Developed custom database-backed web applications for clients using a variety of languages, databases, and deployment configurations
 - Provided technical leadership in the areas of payment systems integration and application performance
 - Advocated and implemented development standards that included the use of version control, API documentation, and automated unit and integration testing
 - Developed a reusable MVC framework written in PHP that streamlined the application development process
 
-### Millennium Health Communications - Senior Web Developer
+## Selected Client Work
 
-#### April 2000 - October 2000
-
-- Designed, architected, and built an online RFP system in ASP with a SQL Server persistence layer
-- Developed a custom syndication engine in VBScript/ASP that used XML to provide health news to content subscribers
+- **2018 - 2019** &ndash; Modernized the ticket purchasing experience for visitors to the **Shedd Aquarium** website by providing a deep integration with their existing ticketing software _(Ruby, Rails, PostgreSQL, API Integration)_
+- **2017 - 2018** &ndash; Worked closely with the web team at **Bethesda Softworks** to re-platform microsites for their popular game titles (Fallout / Elder Scrolls / Quake) using a custom-built PHP library to fetch content from the Contentful API in time for a major E3 announcement _(PHP, Laravel, API Integration)_
+- **2016 - 2017** &ndash; Launched the new "Best States" microsite for **US News** which allowed users to perform multi-faceted rankings comparisons between US states with data delivered from a major publisher as flat files _(Python, Django, PostgreSQL, Custom API)_
+- **2012 - 2015** &ndash; Re-platformed the main **Shure** North America web presence which improved product promotion and provided better integration of custom tools _(Ruby, Rails, MySQL, Redis, API Integration)_
 
 ## Selected Software Projects
 
