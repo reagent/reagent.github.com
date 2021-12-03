@@ -2,3 +2,4 @@ _site
 _references/data/*.yml
 _references/*.pdf
 .DS_Store
+tmp
