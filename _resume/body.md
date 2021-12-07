@@ -40,7 +40,6 @@ In addition to my work developing applications for a variety of clients, I also:
 - Created and refined our engineering hiring process in order to provide consistency in evaluation and ensure that only the top candidates were considered for in-person evaluations
 - Established, planned, and led the engineering team's bi-annual offsite meetings as a means to connect personally and improve professionally
 - Improved software delivery by introducing agile methods that included iteration planning, acceptance test-driven development, and iteration retrospectives
-- Educated others in the development community through various presentations at local and regional events
 
 ### Viget Labs, LLC - Applications Technologist
 
