@@ -12,7 +12,7 @@ class ComponentSource
   end
 
   def to_s
-    @components.map { |f| @path.join(f).read }.join
+    @components.map { |f| @path.join(f).read }.join("\n").strip
   end
 end
 
