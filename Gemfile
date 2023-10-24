@@ -1,9 +1,9 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "github-pages", group: :jekyll_plugins
+gem 'github-pages', group: :jekyll_plugins
 
-gem "nokogiri", ">= 1.10.4"
-gem "rake"
-gem "wkhtmltopdf-binary"
-gem "pdfkit"
-gem "webrick"
+gem 'nokogiri', '>= 1.10.4'
+gem 'pdfkit'
+gem 'rake'
+gem 'webrick'
+gem 'wkhtmltopdf-binary'
