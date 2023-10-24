@@ -1,47 +1,74 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
+require 'bundler/setup'
 
 require_relative '../lib/resume_generator'
 
-root_path   = Pathname.new(__FILE__).join("..", "..").expand_path
-source_path = root_path.join("_resume")
+root_path   = Pathname.new(__FILE__).join('..', '..').expand_path
+source_path = root_path.join('_resume')
 
 config = {
-  "_pages/resume.md" => {
-    components: %w[meta.md body.md footer.md],
-    format:     "markdown"
+  '_pages/resume.md' => {
+    components: %w[
+      meta.md
+      body/summary.md
+      body/experience.md
+      body/client_work.md
+      body/projects.md
+      body/publications.md
+      body/presentations.md
+      body/education.md
+      footer.md
+    ],
+    format: 'markdown'
   },
-  "assets/files/resume-patrick-reagan.pdf" => {
-    components:  %w[header.md body.md],
+  'assets/files/resume-patrick-reagan.pdf' => {
+    components: %w[
+      header.md
+      body/summary.md
+      body/experience.md
+      body/projects.md
+      body/publications.md
+      body/presentations.md
+      body/education.md
+    ],
     stylesheets: %w[1up.css pdf.css],
-    format:      "pdf",
+    format: 'pdf',
     pdf_options: {
-      page_size:     "Letter",
-      margin_left:   "0.5in",
-      margin_right:  "0.5in",
-      margin_top:    "0.25in",
-      margin_bottom: "0.25in"
+      page_size: 'Letter',
+      margin_left: '0.5in',
+      margin_right: '0.5in',
+      margin_top: '0.25in',
+      margin_bottom: '0.25in'
     }
   },
-  "assets/files/resume-patrick-reagan-2up.pdf" => {
-    components:  %w[header.md body.md],
+  'assets/files/resume-patrick-reagan-2up.pdf' => {
+    components: %w[
+      header.md
+      body/summary.md
+      body/experience.md
+      body/client_work.md
+      body/projects.md
+      body/publications.md
+      body/presentations.md
+      body/education.md
+    ],
     stylesheets: %w[2up.css pdf.css],
-    format:      "pdf",
+    format: 'pdf',
     pdf_options: {
-      page_size:     "Letter",
-      margin_left:   "1.0in",
-      margin_right:  "1.0in",
-      margin_top:    "0.75in",
-      margin_bottom: "0.75in"
+      page_size: 'Letter',
+      margin_left: '1.0in',
+      margin_right: '1.0in',
+      margin_top: '0.75in',
+      margin_bottom: '0.75in'
     }
   }
 }
 
 generator = ResumeGenerator.new(
-  root_path: root_path, 
-  source_path: source_path, 
-  config: config
+  root_path:,
+  source_path:,
+  config:
 )
 
 generator.save_to(root_path)
