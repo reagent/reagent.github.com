@@ -1,5 +1,9 @@
 body {
-  font-size: 99px;
+  font-size: 14px;
+}
+
+strong {
+  padding-left: 3px;
 }
 
 h3#viget-labs-llc-applications-technologist {
