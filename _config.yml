@@ -1,3 +1,10 @@
+exclude:
+  - bin
+  - lib
+  - tmp
+  - Gemfile
+  - Gemfile.lock
+
 defaults:
   - scope:
       type: "pages"
