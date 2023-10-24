@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
 class Encrypter
   def initialize(path, base_name, password)
-    @path, @base_name, @password = path, base_name, password
+    @path = path
+    @base_name = base_name
+    @password = password
   end
 
   def encrypt_to(path)
     command = encrypt_command(path)
 
-    Open3.popen2(command) do |stdin, stdout|
+    Open3.popen2(command) do |stdin, _stdout|
       stdin.print @password
       stdin.close
     end

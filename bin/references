@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "bundler/setup"
+require 'bundler/setup'
 
-require "erb"
-require "yaml"
-require "io/console"
-require "open3"
+require 'erb'
+require 'yaml'
+require 'io/console'
+require 'open3'
 
 require_relative '../lib/pdf_target'
 require_relative '../lib/references'
@@ -13,12 +14,12 @@ require_relative '../lib/reference'
 require_relative '../lib/encrypter'
 require_relative '../lib/decrypter'
 
-root_path = Pathname.new(__FILE__).join("..", "..").expand_path
+root_path = Pathname.new(__FILE__).join('..', '..').expand_path
 references_path = root_path.join('_references')
 data_path = references_path.join('data')
 
-if ARGV.length.zero?
-  puts "Usage: references [enc|dec|gen|new] <args>"
+if ARGV.empty?
+  puts 'Usage: references [enc|dec|gen|new] <args>'
   exit 1
 end
 
@@ -26,62 +27,62 @@ command, *args = ARGV
 
 case command
 when 'new'
-  initials, _ = args
+  initials, = args
 
   if initials.nil?
-    puts "Error: missing initials"
-    puts "Usage: references new <initials>"
+    puts 'Error: missing initials'
+    puts 'Usage: references new <initials>'
     exit 1
   end
 
   target = data_path.join("#{initials}.yml")
 
-  if (File.exist?(target))
-    puts "Error: file exists"
+  if File.exist?(target)
+    puts 'Error: file exists'
     exit 1
   end
 
   File.open(target, 'w') do |out|
     out << <<~EOF
-      first_name: 
-      last_name: 
-      company: 
-      title: 
-      address_1: 
-      address_2: 
-      city: 
-      state: 
-      postal_code: 
-      email: 
-      phone: 
+      first_name:#{' '}
+      last_name:#{' '}
+      company:#{' '}
+      title:#{' '}
+      address_1:#{' '}
+      address_2:#{' '}
+      city:#{' '}
+      state:#{' '}
+      postal_code:#{' '}
+      email:#{' '}
+      phone:#{' '}
     EOF
   end
 when 'enc'
-  initials, _ = args
+  initials, = args
 
   if initials.nil?
-    puts "Error: missing initials"
-    puts "Usage: references enc <initials>"
+    puts 'Error: missing initials'
+    puts 'Usage: references enc <initials>'
     exit 1
   end
 
-  password = IO.console.getpass("Password: ")
+  password = IO.console.getpass('Password: ')
   encrypter = Encrypter.new(data_path, "#{initials}.yml", password)
   encrypter.encrypt_to(data_path.join("#{initials}.yml.enc"))
 when 'dec'
-  initials, _ = args
+  initials, = args
 
   if initials.nil?
-    puts "Error: missing initials"
-    puts "Usage: references dec <initials>"
+    puts 'Error: missing initials'
+    puts 'Usage: references dec <initials>'
     exit 1
   end
 
-  password = IO.console.getpass("Password: ")
+  password = IO.console.getpass('Password: ')
   decrypter = Decrypter.new(data_path.join("#{initials}.yml.enc"), password)
   decrypter.decrypt_to(data_path.join("#{initials}.yml"))
 when 'gen'
-  password = IO.console.getpass("Password: ")
+  password = IO.console.getpass('Password: ')
 
   config = {
     stylesheets: %w[main.css],
@@ -89,11 +90,11 @@ when 'gen'
       render: [:HARDBREAKS]
     },
     pdf_options: {
-      page_size:     "Letter",
-      margin_left:   "1.0in",
-      margin_right:  "0.5in",
-      margin_top:    "0.75in",
-      margin_bottom: "0.25in"
+      page_size: 'Letter',
+      margin_left: '1.0in',
+      margin_right: '0.5in',
+      margin_top: '0.75in',
+      margin_bottom: '0.25in'
     }
   }
 
@@ -101,14 +102,14 @@ when 'gen'
     path: references_path,
     stylesheet_path: references_path.join('stylesheets'),
     destination_path: root_path,
-    config: config,
+    config:,
     initials: args,
-    password: password
+    password:
   )
 
-  references.save_to("_references/references.pdf")
+  references.save_to('_references/references.pdf')
 else
   puts "Error: unknown command: #{command}"
-  puts "Usage: references [enc|dec|gen] <args>"
+  puts 'Usage: references [enc|dec|gen] <args>'
   exit 1
 end

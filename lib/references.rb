@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class References
   def initialize(
     path:,
@@ -17,7 +19,7 @@ class References
 
   def save_to(path)
     PdfTarget.new(
-      source: source,
+      source:,
       stylesheet_path: @stylesheet_path,
       destination_path: path,
       config: @config
@@ -32,7 +34,7 @@ class References
     @references ||= @initials.map do |initial|
       Reference.new(
         path: @path.join('data'),
-        initial: initial,
+        initial:,
         password: @password
       )
     end
@@ -40,9 +42,9 @@ class References
 
   def template
     <<~EOF
-    # References for Patrick Reagan
+      # References for Patrick Reagan
 
-    <%= references.map(&:out).join("\n") %>
+      <%= references.map(&:out).join("\n") %>
     EOF
   end
 end
