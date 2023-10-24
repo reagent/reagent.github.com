@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 class Decrypter
   def initialize(path, password)
-    @path, @password = path, password
+    @path = path
+    @password = password
   end
 
   def decrypt_to(path)
-    File.open(path, 'w') {|f| f << decrypt }
+    File.open(path, 'w') { |f| f << decrypt }
   end
 
   def decrypt

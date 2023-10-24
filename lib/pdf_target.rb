@@ -1,15 +1,18 @@
-require "pathname"
-require "commonmarker"
-require "pdfkit"
-require "nokogiri"
+# frozen_string_literal: true
+
+require 'pathname'
+require 'commonmarker'
+require 'pdfkit'
+require 'nokogiri'
 
 class ComponentSource
   def initialize(path:, components:)
-    @path, @components = path, components
+    @path = path
+    @components = components
   end
 
   def to_s
-    @components.map {|f| @path.join(f).read }.join
+    @components.map { |f| @path.join(f).read }.join
   end
 end
 
@@ -40,7 +43,7 @@ class PdfTarget
     html = CommonMarker.render_html(*markdown_args)
     document = Nokogiri::HTML(html)
 
-    html_node = document.at_css("html")
+    html_node = document.at_css('html')
 
     style_content = String.new.tap do |content|
       @config[:stylesheets].each do |filename|
@@ -56,11 +59,11 @@ class PdfTarget
         </style>
       </head>
     HTML
-    )
+                                        )
 
     # Adding IDs to sections
-    (document / "h1,h2,h3,h4,h5,h6").each do |node|
-      node["id"] = node.text.downcase.gsub(/\W+/, "-").squeeze("-")
+    (document / 'h1,h2,h3,h4,h5,h6').each do |node|
+      node['id'] = node.text.downcase.gsub(/\W+/, '-').squeeze('-')
     end
 
     output_file = Pathname.new(path).join(@destination_path)

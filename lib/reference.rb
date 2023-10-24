@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Reference
   def initialize(path:, initial:, password:)
     data_file = Pathname.new(path).join("#{initial}.yml.enc")
@@ -48,15 +50,15 @@ class Reference
 
   def template
     <<~EOF
-    ## <%= name %>
-    ### <%= title %>
-    #### <%= company %>
-    
-    <%= address %>
-    <%= city %>, <%= state %> <%= postal_code %>
+      ## <%= name %>
+      ### <%= title %>
+      #### <%= company %>
 
-    <%= email %>
-    <%= phone %>
+      <%= address %>
+      <%= city %>, <%= state %> <%= postal_code %>
+
+      <%= email %>
+      <%= phone %>
     EOF
   end
 end

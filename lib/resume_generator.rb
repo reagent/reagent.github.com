@@ -1,7 +1,9 @@
-require_relative "./markdown_target"
-require_relative "./pdf_target"
+# frozen_string_literal: true
 
-class ResumeGenerator 
+require_relative './markdown_target'
+require_relative './pdf_target'
+
+class ResumeGenerator
   def initialize(root_path:, source_path:, config:)
     @root_path = root_path
     @source_path = source_path
@@ -16,18 +18,18 @@ class ResumeGenerator
       )
 
       case config[:format]
-      when "markdown"
+      when 'markdown'
         MarkdownTarget.new(
-          source: source,
+          source:,
           destination_path: path,
-          config: config
+          config:
         )
-      when "pdf"
+      when 'pdf'
         PdfTarget.new(
-          source: source,
+          source:,
           stylesheet_path: @source_path,
           destination_path: path,
-          config: config
+          config:
         )
       else
         raise "Invalid format: '#{@config[:format]}''"
