@@ -1,12 +1,14 @@
 ---
 title: Résumé
 ---
+
 ## Summary
 
 I am an experienced, pragmatic software developer with a love for code
 quality, collaboration, and continuous improvement. I excel at breaking down
 complex engineering problems and building applications that deliver value across
 a diverse set of business domains.
+
 ## Experience
 
 ### [Ideon] - Staff Software Engineer
@@ -68,12 +70,14 @@ In addition to my work developing applications for a variety of clients, I also:
 [Ideon]: https://www.linkedin.com/company/ideon-hq/
 [Gloo]: https://www.linkedin.com/company/gloo-llc/
 [Viget]: https://www.linkedin.com/company/viget-labs/
+
 ## Selected Client Work
 
 - **2018 - 2019** &ndash; Modernized the ticket purchasing experience for visitors to the **Shedd Aquarium** website by providing a deep integration with their existing ticketing software _(Ruby, Rails, PostgreSQL, API Integration)_
 - **2017 - 2018** &ndash; Worked closely with the web team at **Bethesda Softworks** to re-platform microsites for their popular game titles (Fallout / Elder Scrolls / Quake) using a custom-built PHP library to fetch content from the Contentful API in time for a major E3 announcement _(PHP, Laravel, API Integration)_
 - **2016 - 2017** &ndash; Launched the new "Best States" microsite for **US News** which allowed users to perform multi-faceted rankings comparisons between US states with data delivered from a major publisher as flat files _(Python, Django, PostgreSQL, Custom API)_
 - **2012 - 2015** &ndash; Re-platformed the main **Shure** North America web presence which improved product promotion and provided better integration of custom tools _(Ruby, Rails, MySQL, Redis, API Integration)_
+
 ## Selected Software Projects
 
 - **[PostgreSQL Migrator]** _(Rust)_ &ndash; A basic migrator library that will apply SQL files to a PostgreSQL database
@@ -87,6 +91,7 @@ In addition to my work developing applications for a variety of clients, I also:
 [Blog Service]: https://github.com/reagent/blog-service
 [dnsimple]: https://github.com/vigetlabs/dnsimple
 [minecraft-server]: (https://github.com/reagent/minecraft-server)
+
 ## Publications
 
 - **[Advanced Rails Recipes]** / Pragmatic Bookshelf / 2009 (Contributing Author)
@@ -96,6 +101,7 @@ In addition to my work developing applications for a variety of clients, I also:
 [Advanced Rails Recipes]: http://www.amazon.com/Advanced-Rails-Recipes-Mike-Clark/dp/0978739221/
 [A Practical Guide to WinCVS and SSH]: https://web.archive.org/web/20160317084631/http://www.google.com/search?q=a+practical+guide+to+wincvs+ssh
 [Using Oracle With PHP]: https://web.archive.org/web/20060312083752/http://webmonkey.com/webmonkey/01/26/index4a.html?tw=backend
+
 ## Presentations
 
 - **[Coding with Confidence: Adding TDD to Your Toolset]** / CMAP Fall Code Camp / 2009
@@ -108,11 +114,13 @@ In addition to my work developing applications for a variety of clients, I also:
 [Make Everyone a Tester: Natural Language Acceptance Testing]: http://www.slideshare.net/reagent/make-everyone-a-tester-natural-language-acceptance-testing-2446162
 [Changing Your Mindset: Getting Started with Test-Driven Development]: http://www.slideshare.net/reagent/changing-your-mindset-getting-started-with-testdriven-development
 [Mockfight! Flexmock v. Mocha]: http://www.slideshare.net/reagent/mockfight-flexmock-vs-mocha-2936911
+
 ## Education
 
 **James Madison University**
 
 B.S. Computer Science (1999)
+
 ---
 PDF versions: [1-page] / [2-page]
 

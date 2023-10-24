@@ -37,8 +37,8 @@ config = {
     format: 'pdf',
     pdf_options: {
       page_size: 'Letter',
-      margin_left: '0.5in',
-      margin_right: '0.5in',
+      margin_left: '0.25in',
+      margin_right: '0.25in',
       margin_top: '0.25in',
       margin_bottom: '0.25in'
     }
@@ -60,8 +60,8 @@ config = {
       page_size: 'Letter',
       margin_left: '1.0in',
       margin_right: '1.0in',
-      margin_top: '0.75in',
-      margin_bottom: '0.75in'
+      margin_top: '0.5in',
+      margin_bottom: '0.5in'
     }
   }
 }
