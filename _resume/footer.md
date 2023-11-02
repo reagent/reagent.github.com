@@ -1,7 +1,6 @@
 ---
-PDF versions: [1-page] / [2-page]
+[PDF version]
 
 ---
 
-[1-page]: /assets/files/resume-patrick-reagan.pdf
-[2-page]: /assets/files/resume-patrick-reagan-2up.pdf
+[PDF version]: /assets/files/resume-patrick-reagan.pdf
