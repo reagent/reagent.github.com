@@ -217,7 +217,6 @@ GEM
       sawyer (~> 0.9)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    pdfkit (0.8.7.3)
     public_suffix (4.0.7)
     racc (1.7.1)
     rake (13.0.6)
@@ -250,18 +249,14 @@ GEM
     unf_ext (0.0.8.2)
     unicode-display_width (1.8.0)
     webrick (1.8.1)
-    wkhtmltopdf-binary (0.12.6.6)
 
 PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
   github-pages
-  nokogiri (>= 1.10.4)
-  pdfkit
   rake
   webrick
-  wkhtmltopdf-binary
 
 BUNDLED WITH
    2.4.19
