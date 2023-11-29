@@ -145,7 +145,9 @@ James Madison University
 Harrisonburg, VA
 
 ---
-[PDF version]
+
+[PDF version][]
+
 ---
 
 [PDF version]: /assets/files/resume-patrick-reagan.pdf
