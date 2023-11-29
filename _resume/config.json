@@ -1,0 +1,12 @@
+{
+  "filename": "resume-patrick-reagan.pdf",
+  "templates": ["page-1.html.ejs", "page-2.html.ejs"],
+  "options": {
+    "margins": {
+      "top": "0.1in",
+      "bottom": "0.1in",
+      "left": "0.25in",
+      "right": "0.25in"
+    }
+  }
+}

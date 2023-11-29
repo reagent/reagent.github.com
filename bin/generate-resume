@@ -1,75 +1,46 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'bundler/setup'
+require 'pathname'
 
-require_relative '../lib/resume_generator'
+# Generate Markdown to be rendered by Jekyll
+
+components = %w[
+  meta.md
+  content/summary.md
+  content/experience.md
+  content/experience/ideon.md
+  content/experience/kind_health.md
+  content/experience/gloo.md
+  content/experience/viget_development_director.md
+  content/experience/viget_applications_technologist.md
+  content/experience/millennium_health.md
+  content/experience/dyncorp.md
+  content/client_work.md
+  content/projects/full.md
+  content/publications/full.md
+  content/presentations/full.md
+  content/education.md
+  footer.md
+]
 
 root_path   = Pathname.new(__FILE__).join('..', '..').expand_path
 source_path = root_path.join('_resume')
 
-config = {
-  '_pages/resume.md' => {
-    components: %w[
-      meta.md
-      body/summary.md
-      body/experience.md
-      body/client_work.md
-      body/projects.md
-      body/publications.md
-      body/presentations.md
-      body/education.md
-      footer.md
-    ],
-    format: 'markdown'
-  },
-  'assets/files/resume-patrick-reagan.pdf' => {
-    components: %w[
-      header.md
-      body/summary.md
-      body/experience.md
-      body/projects.md
-      body/publications.md
-      body/presentations.md
-      body/education.md
-    ],
-    stylesheets: %w[1up.css pdf.css],
-    format: 'pdf',
-    pdf_options: {
-      page_size: 'Letter',
-      margin_left: '0.25in',
-      margin_right: '0.25in',
-      margin_top: '0.25in',
-      margin_bottom: '0.25in'
-    }
-  },
-  'assets/files/resume-patrick-reagan-2up.pdf' => {
-    components: %w[
-      header.md
-      body/summary.md
-      body/experience.md
-      body/client_work.md
-      body/projects.md
-      body/publications.md
-      body/presentations.md
-      body/education.md
-    ],
-    stylesheets: %w[2up.css pdf.css],
-    format: 'pdf',
-    pdf_options: {
-      page_size: 'Letter',
-      margin_left: '1.0in',
-      margin_right: '1.0in',
-      margin_top: '0.5in',
-      margin_bottom: '0.5in'
-    }
-  }
-}
+content = components.map { |p| source_path.join(p).read }.join("\n")
 
-generator = ResumeGenerator.new(
-  root_path:,
-  source_path:,
-  config:
-)
+root_path.join('_pages/resume.md').write(content)
 
-generator.save_to(root_path)
+# Generate PDF version
+
+`yarn resume generate _resume`
+
+if $?.success?
+  FileUtils.cp(
+    source_path.join('output', 'resume-patrick-reagan.pdf'),
+    root_path.join('assets', 'files')
+  )
+else
+  warn('Resume generation failed')
+  exit(1)
+end
