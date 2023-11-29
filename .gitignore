@@ -1,6 +1,7 @@
 _site
 _references/data/*.yml
 _references/*.pdf
+_resume/output
 .DS_Store
 tmp
 node_modules

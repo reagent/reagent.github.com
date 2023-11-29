@@ -1,0 +1,38 @@
+<%- include('header.html.ejs') %>
+<main>
+  <div class="sidebar">
+    <section class="contact">
+      <h2>Contact</h2>
+      <ul class="icon">
+        <li class="phone"><%- content.render('contacts/phone') %></li>
+        <li class="email"><%- content.render('contacts/email') %></li>
+        <li class="linkedin"><%- content.render('contacts/linkedin') %></li>
+        <li class="github"><%- content.render('contacts/github') %></li>
+        <li class="location">Boulder, CO</li>
+      </ul>
+      <div class="divider"></div>
+    </section>
+    <section class="education">
+      <%- content.render('education') %>
+      <div class="divider"></div>
+    </section>
+    <section class="skills">
+      <%- content.render('skills') %>
+      <div class="divider"></div>
+    </section>
+    <section class="projects">
+      <%- content.render('projects/abbreviated') %>
+      <div class="divider"></div>
+    </section>
+  </div>
+  <div class="content">
+    <%- content.render('summary') %>
+    <div class="divider"></div>
+
+    <h2>Work Experience</h2>
+    <%- content.render('experience/ideon') %> <%-
+    content.render('experience/kind_health') %> <%-
+    content.render('experience/gloo') %>
+  </div>
+</main>
+<%- include('footer.html.ejs') %>

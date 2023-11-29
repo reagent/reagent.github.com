@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    <%- fonts.embed('SourceSansPro-Regular.ttf') %>
+    <%- fonts.embed('icons.ttf') %>
+    <%- fonts.embed('SourceSansPro-Light.ttf') %>
+
+    body {
+      font-family: "SourceSansPro-Regular", sans-serif;
+      font-size: 12.75px;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 15px;
+      margin-top: 20px;
+      font-family: "SourceSansPro-Light";
+    }
+
+    .sidebar {
+      float: left;
+      width: 30%;
+      padding-right: 10px;
+    }
+
+    h1, h2, h3, h4, h5 {
+      margin: 0;
+      padding: 0;
+      color: #a0a0a0;
+    }
+
+    .sidebar h2, .content h2 {
+      font-variant: small-caps;
+    }
+
+    .sidebar ul {
+      margin: 0;
+    }
+
+    .sidebar h3 {
+      font-size: 12px;
+      font-weight: bolder;
+    }
+
+    h2, h4 {
+      margin-bottom: 5px;
+    }
+
+    header h1,
+    header h2 {
+      text-transform: uppercase;
+    }
+
+    header h1 {
+      font-size: 56px;
+    }
+
+    header h2 {
+      font-size: 16px;
+    }
+
+    .sidebar .element {
+      border-bottom: 1px solid gray;
+    }
+
+    .divider {
+      border-top: 1px solid gray;
+      height: 1px;
+      width: 75%;
+      margin: auto;
+    }
+
+    .sidebar .divider {
+      margin: 10px auto 5px 5px;
+    }
+
+    .content .divider {
+      margin: 22px auto 5px auto;
+    }
+
+    .content {
+      float: left;
+      width: 65%;
+      padding-left: 20px;
+      border-left: 1px solid gray;
+      text-align: justify;
+    }
+
+    .sidebar p {
+      padding-left: 10px;
+      margin: 0 0 5px 0;
+    }
+
+    .education p {
+      margin: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+    }
+
+    .content p {
+      margin-top: 2px;
+    }
+
+    ul.icon {
+      list-style-type: none;
+    }
+
+    ul.icon li {
+      padding: 0;
+      text-indent: -1.4em;
+    }
+
+    ul.icon li:before {
+      font-family: "icons";
+      float: left;
+      width: 1.4em;
+    }
+
+    ul.icon li.phone:before {
+      content: "\e801";
+    }
+
+    ul.icon li.email:before {
+      content: "\e800";
+    }
+
+    ul.icon li.linkedin:before {
+      content: "\f30c";
+    }
+
+    ul.icon li.github:before {
+      content: "\f113";
+    }
+
+    ul.icon li.location:before {
+      content: "\e802";
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Patrick Reagan</h1>
+    <h2>Experienced Software Engineer and Leader</h2>
+    <div class="divider"></div>
+  </header>

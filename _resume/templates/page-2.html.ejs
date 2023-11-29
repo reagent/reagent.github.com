@@ -1,0 +1,21 @@
+<%- include('header.html.ejs') %>
+<main>
+  <div class="sidebar">
+    <section class="publications">
+      <%- content.render('publications/abbreviated') %>
+      <div class="divider"></div>
+    </section>
+    <section class="presentations">
+      <%- content.render('presentations/abbreviated') %>
+      <div class="divider"></div>
+    </section>
+  </div>
+  <div class="content">
+    <h2>Work Experience (cont.)</h2>
+    <%- content.render('experience/viget_development_director') %> <%-
+    content.render('experience/viget_applications_technologist') %> <%-
+    content.render('experience/millennium_health') %> <%-
+    content.render('experience/dyncorp') %>
+  </div>
+</main>
+<%- include('footer.html.ejs') %>
