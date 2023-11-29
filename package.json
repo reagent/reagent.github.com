@@ -1,0 +1,11 @@
+{
+  "name": "reagent.github.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:reagent/reagent.github.com.git",
+  "author": "Patrick Reagan <github@the-reagans.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@reagent/resume-generator": "^1.0.0"
+  }
+}

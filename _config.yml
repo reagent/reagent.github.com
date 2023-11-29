@@ -4,6 +4,7 @@ exclude:
   - tmp
   - Gemfile
   - Gemfile.lock
+  - node_modules
 
 defaults:
   - scope:
