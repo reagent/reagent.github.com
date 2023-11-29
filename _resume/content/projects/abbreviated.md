@@ -24,4 +24,4 @@ Simplifying setup and teardown of family Minecraft servers
 [Fleakr]: https://github.com/reagent/fleakr
 [Blog Service]: https://github.com/reagent/blog-service
 [dnsimple]: https://github.com/vigetlabs/dnsimple
-[minecraft-server]: (https://github.com/reagent/minecraft-server)
+[minecraft-server]: https://github.com/reagent/minecraft-server
