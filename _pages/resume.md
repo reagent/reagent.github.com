@@ -9,11 +9,11 @@ quality, collaboration, and continuous improvement. I excel at breaking down
 complex engineering problems and building applications that deliver value across
 a diverse set of business domains.
 
-## Experience
+## Work Experience
 
-### [Ideon] - Staff Software Engineer
+### Staff Software Engineer
 
-#### January 2023 - October 2023
+#### [Ideon] | January 2023 - October 2023
 
 At Ideon, I expanded our enrollments platform to connect benefit administration providers with a diverse set of insurance carriers.
 
@@ -22,9 +22,11 @@ At Ideon, I expanded our enrollments platform to connect benefit administration 
 - Organized and led a bi-weekly cross-functional engineering meeting to showcase team achievements and share technology trends
 - Mentored other engineers through focused pair-programming sessions and code reviews
 
-### [KindHealth] - Principal Engineer
+[Ideon]: https://www.linkedin.com/company/ideon-hq/
 
-#### February 2021 - December 2022
+### Principal Engineer
+
+#### [KindHealth] | February 2021 - December 2022
 
 At KindHealth, I built technology solutions to help scale their growing brokerage business.
 
@@ -34,9 +36,11 @@ At KindHealth, I built technology solutions to help scale their growing brokerag
 - Built a shared data access library that provided a migration pathway away from an untested legacy Express / JavaScript backend towards a modern Nest.js / TypeScript backend
 - Fostered an engineering culture of constant improvement through thoughtful code reviews, tech-focused presentations, and one-on-one remote pairing sessions with other engineers
 
-### [Gloo] - Staff Engineer: Platform
+[KindHealth]: https://www.linkedin.com/company/kindhealth/
 
-#### November 2019 - January 2021
+### Staff Engineer: Platform
+
+#### [Gloo] | November 2019 - January 2021
 
 As Staff Engineer, I architected and built several HTTP-based microservices in support of various in-market applications.
 
@@ -45,9 +49,23 @@ As Staff Engineer, I architected and built several HTTP-based microservices in s
 - Led bi-weekly meetings that provided a venue for engineers to share best practices for application development, demonstrate platform observability features, and keep the team up-to-date on relevant technologies
 - Coordinated and directed contractor teams in assisting with feature planning and bug fixes for critical in-market products and supporting microservices
 
-### [Viget] - Development Director
+[Gloo]: https://www.linkedin.com/company/gloo-llc/
 
-#### June 2005 - November 2019
+### Applications Technologist
+
+### [Viget] | November 2000 - June 2005
+
+- Administered internal and client servers running a variety of operating systems, web servers, and databases
+- Developed custom database-backed web applications for clients using a variety of languages, databases, and deployment configurations
+- Provided technical leadership in the areas of payment systems integration and application performance
+- Advocated and implemented development standards that included the use of version control, API documentation, and automated unit and integration testing
+- Developed a reusable MVC framework written in PHP that streamlined the application development process
+
+[Viget]: https://www.linkedin.com/company/viget-labs/
+
+### Development Director
+
+#### [Viget] | June 2005 - November 2019
 
 In addition to my work developing applications for a variety of clients, I also:
 
@@ -56,20 +74,23 @@ In addition to my work developing applications for a variety of clients, I also:
 - Established, planned, and led the engineering team's bi-annual offsite meetings as a means to connect personally and improve professionally
 - Improved software delivery by introducing agile methods that included iteration planning, acceptance test-driven development, and iteration retrospectives
 
-### [Viget] - Applications Technologist
-
-#### November 2000 - June 2005
-
-- Administered internal and client servers running a variety of operating systems, web servers, and databases
-- Developed custom database-backed web applications for clients using a variety of languages, databases, and deployment configurations
-- Provided technical leadership in the areas of payment systems integration and application performance
-- Advocated and implemented development standards that included the use of version control, API documentation, and automated unit and integration testing
-- Developed a reusable MVC framework written in PHP that streamlined the application development process
-
-[KindHealth]: https://www.linkedin.com/company/kindhealth/
-[Ideon]: https://www.linkedin.com/company/ideon-hq/
-[Gloo]: https://www.linkedin.com/company/gloo-llc/
 [Viget]: https://www.linkedin.com/company/viget-labs/
+
+### Senior Web Developer
+
+#### Millennium Health Communications | April 2000 - October 2000
+
+- Developed sweeping enhancements to the existing medical auction site using ASP with a SQL Server back-end - this included creating an online RFP service from the ground up
+- Configured and deployed a Linux server for use as an internal web, database, DNS, and file server
+- Developed a custom syndication engine in VBScript/ASP that used XML to provide health news to content subscribers
+- Developed an internal PHP application to serve as a lightweight CMS for the organization
+
+### Software Engineer
+
+#### Dyncorp Information Systems | June 1999 - April 2000
+
+- Helped develop the interface for a web-based stock trading system that hooked into proprietary server-side software components
+- Developed enhancements to the OpenView network monitoring system deployed to the NYSE
 
 ## Selected Client Work
 
@@ -117,13 +138,14 @@ In addition to my work developing applications for a variety of clients, I also:
 
 ## Education
 
-**James Madison University**
+**Bachelor's Degree, Computer Science**
 
-B.S. Computer Science (1999)
+James Madison University
+
+Harrisonburg, VA
 
 ---
 [PDF version]
-
 ---
 
 [PDF version]: /assets/files/resume-patrick-reagan.pdf
