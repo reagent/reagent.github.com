@@ -51,18 +51,6 @@ As Staff Engineer, I architected and built several HTTP-based microservices in s
 
 [Gloo]: https://www.linkedin.com/company/gloo-llc/
 
-### Applications Technologist
-
-### [Viget] | November 2000 - June 2005
-
-- Administered internal and client servers running a variety of operating systems, web servers, and databases
-- Developed custom database-backed web applications for clients using a variety of languages, databases, and deployment configurations
-- Provided technical leadership in the areas of payment systems integration and application performance
-- Advocated and implemented development standards that included the use of version control, API documentation, and automated unit and integration testing
-- Developed a reusable MVC framework written in PHP that streamlined the application development process
-
-[Viget]: https://www.linkedin.com/company/viget-labs/
-
 ### Development Director
 
 #### [Viget] | June 2005 - November 2019
@@ -73,6 +61,18 @@ In addition to my work developing applications for a variety of clients, I also:
 - Created and refined our engineering hiring process in order to provide consistency in evaluation and ensure that only the top candidates were considered for in-person evaluations
 - Established, planned, and led the engineering team's bi-annual offsite meetings as a means to connect personally and improve professionally
 - Improved software delivery by introducing agile methods that included iteration planning, acceptance test-driven development, and iteration retrospectives
+
+[Viget]: https://www.linkedin.com/company/viget-labs/
+
+### Applications Technologist
+
+#### [Viget] | November 2000 - June 2005
+
+- Administered internal and client servers running a variety of operating systems, web servers, and databases
+- Developed custom database-backed web applications for clients using a variety of languages, databases, and deployment configurations
+- Provided technical leadership in the areas of payment systems integration and application performance
+- Advocated and implemented development standards that included the use of version control, API documentation, and automated unit and integration testing
+- Developed a reusable MVC framework written in PHP that streamlined the application development process
 
 [Viget]: https://www.linkedin.com/company/viget-labs/
 
