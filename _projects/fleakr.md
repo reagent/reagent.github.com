@@ -2,7 +2,7 @@
 name: Fleakr
 language: Ruby
 featured: true
-priority: 10
+priority: 30
 repository_url: https://github.com/reagent/fleakr
 ---
 

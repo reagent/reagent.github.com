@@ -2,7 +2,7 @@
 name: Geocoder
 language: Ruby
 featured: false
-priority: 40
+priority: 90
 repository_url: https://github.com/reagent/geocoder
 ---
 

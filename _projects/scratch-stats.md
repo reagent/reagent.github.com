@@ -1,8 +1,8 @@
 ---
 name: scratch-stats
 language: TypeScript
-featured: true
-priority: 6
+featured: false
+priority: 100
 repository_url: https://github.com/reagent/scratch-stats
 ---
 

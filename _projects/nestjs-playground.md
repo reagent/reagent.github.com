@@ -1,8 +1,8 @@
 ---
 name: nestjs-playground
 language: TypeScript
-featured: true
-priority: 5
+featured: false
+priority: 87
 repository_url: https://github.com/reagent/nestjs-playground
 ---
 

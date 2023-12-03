@@ -2,7 +2,7 @@
 name: dnsimple
 language: Python
 featured: true
-priority: 30
+priority: 40
 repository_url: https://github.com/vigetlabs/dnsimple
 ---
 

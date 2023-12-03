@@ -2,7 +2,7 @@
 name: Graft
 language: Ruby
 featured: false
-priority: 20
+priority: 80
 repository_url: https://github.com/reagent/graft
 ---
 
