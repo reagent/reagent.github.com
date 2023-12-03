@@ -2,7 +2,7 @@
 name: TestFS
 language: Ruby
 featured: false
-priority: 50
+priority: 85
 repository_url: https://github.com/reagent/test-fs
 ---
 

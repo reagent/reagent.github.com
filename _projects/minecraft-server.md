@@ -2,7 +2,7 @@
 name: minecraft-server
 language: Ansible / Python
 featured: true
-priority: 80
+priority: 60
 repository_url: https://github.com/reagent/minecraft-server
 ---
 
