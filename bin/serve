@@ -3,7 +3,7 @@
 OPTS=
 
 if [ "$1" != "live" ]; then
-  OPTS="--drafts"
+  OPTS="--drafts --future"
 fi
 
 
