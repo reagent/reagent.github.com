@@ -140,7 +140,7 @@ step on each other's schema migrations and data. I parameterize
 directory, with an environment variable escape hatch when I want to override
 it:
 
-```yaml
+```
 <%
   database_base_name = ENV.fetch("DATABASE_BASE_NAME") do
     "myapp_#{Rails.root.basename.to_s.gsub(/\W+/, "_")}"
