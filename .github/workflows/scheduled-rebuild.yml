@@ -1,0 +1,17 @@
+name: Scheduled site rebuild
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # daily at noon UTC
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+    steps:
+      - name: Request GitHub Pages rebuild
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api --method POST /repos/${{ github.repository }}/pages/builds
